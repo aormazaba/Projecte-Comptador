@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     internal lateinit var timeTextView: TextView
     internal lateinit var counterTextView: TextView
     internal var counter = 0
+    internal var time = 60
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             incrementCounter()
 
         }
+
+       timeTextView.text = getString(R.string.timeText, time)
     }
 
     private fun incrementCounter() {
